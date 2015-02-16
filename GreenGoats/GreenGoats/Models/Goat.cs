@@ -14,6 +14,8 @@ namespace GreenGoats.Models
     public string GoatType { get; set; }
     public string GoatGender { get; set; }
 
+    public virtual ICollection<Pasture> Pastures { get; set; }
+  
     public virtual ICollection<Lot> Lots { get; set; }
     
   }

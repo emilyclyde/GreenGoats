@@ -14,6 +14,7 @@ namespace GreenGoats.Models
       public string CustomerAddress { get; set; }
       public string CustomerEmail { get; set; }
 
+      public virtual Goat Goat { get; set; }
       public virtual ICollection<Lot> Lots { get; set; }
     }
   }

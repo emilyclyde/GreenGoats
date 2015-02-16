@@ -42,7 +42,25 @@
             @Html.DisplayFor(model => model.GoatGender)
         </dd>
 
+        <dd>
+            <table class="table">
+                <tr>
+
+                    <th>Field</th>
+                </tr>
+                @foreach (var item in Model.Pastures)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Field)
+                        </td>
+                    </tr>
+                }
+            </table>
+
+        <dd>
     </dl>
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.GoatID }) |

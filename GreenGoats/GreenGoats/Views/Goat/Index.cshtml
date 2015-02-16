@@ -9,6 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -22,7 +30,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GoatGender)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -40,12 +48,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.GoatGender)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GoatID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GoatID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GoatID })
-        </td>
-    </tr>
+        
+        
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.GoatID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.GoatID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.GoatID })
+            </td>
+        </tr>
 }
 
 </table>

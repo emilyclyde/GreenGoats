@@ -33,6 +33,7 @@
         <th>
             @Html.DisplayNameFor(model => model.LotDescription)
         </th>
+       
         <th></th>
     </tr>
 
@@ -59,6 +60,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.LotDescription)
         </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.LotID }) |
             @Html.ActionLink("Details", "Details", new { id=item.LotID }) |

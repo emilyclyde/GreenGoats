@@ -18,6 +18,8 @@ namespace GreenGoats.DAL
 
       public DbSet<Goat> Goats { get; set; }
       public DbSet<Lot> Lots { get; set; }
+
+      public DbSet<Pasture> Pastures { get; set; }
       
       public DbSet<Customer> Customers { get; set; }
       
