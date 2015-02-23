@@ -18,6 +18,7 @@ namespace GreenGoats.Controllers
     // GET: Goat
     public ActionResult Index()
     {
+
       return View(db.Goats.ToList());
     }
 
@@ -37,8 +38,32 @@ namespace GreenGoats.Controllers
     }
 
     // GET: Goat/Create
-    public ActionResult Create()
+    public ActionResult Create(string goatName, string searchString)
     {
+
+      /*var GoatList = new List<string>();
+
+      var GoatQuery = from g in db.Goats
+                      orderby g.GoatName
+                      select g.GoatName;
+
+      GoatList.AddRange(GoatQuery.Distinct());
+      ViewBag.goatName = new SelectList(GoatList);
+
+      var goats = from g in db.Goats
+                  select g;
+
+      if (!String.IsNullOrEmpty(searchString))
+      {
+        goats = goats.Where(s => s.GoatName.Contains(searchString));
+      }
+
+      if (!string.IsNullOrEmpty(goatName))
+      {
+        goats = goats.Where(x => x.GoatName == goatName);
+      }
+
+      return View(goatName);*/
       return View();
     }
 

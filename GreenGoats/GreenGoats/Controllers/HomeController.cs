@@ -3,15 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GreenGoats.DAL;
+using GreenGoats.Models;
+using System.Data;
+using System.Data.Entity;
+
 
 namespace GreenGoats.Controllers
 {
   public class HomeController : Controller
   {
+
     public ActionResult Index()
     {
+
       return View();
     }
+
+
+
 
     public ActionResult About()
     {

@@ -1,5 +1,4 @@
-﻿
-@*Using a Viewbag with a loosley typed, no model version *@
+﻿@*Using a Viewbag with a loosley typed, no model version *@
 
 @{
     ViewBag.Title = "View";
@@ -7,26 +6,24 @@
 }
 
 
-@ViewBag.MyMessageToUsers
-
 
 
 
 <table class="table">
+
     <tr>
+        <th>
+            @ViewBag.MyMessageToUsers
+        </th>
         <th>
             <img src="~/Content/babygoat1.jpg" />
         </th>
         <th>
             <img src="~/Content/babygoat2.jpg" />
-        </th>     
+        </th>
         <th>
             <img src="~/Content/goatbaby.jpg" />
-
-      
-        <th>
         </th>
     </tr>
 
-   
 </table>

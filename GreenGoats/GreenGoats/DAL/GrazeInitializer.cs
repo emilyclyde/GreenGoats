@@ -48,11 +48,11 @@ namespace GreenGoats.DAL
         new Customer{CustomerID=2, CustomerFirst="Jerry",CustomerLast="Jones", CustomerEmail="jerry@email.com", CustomerAddress="456 East Ave"},
         new Customer{CustomerID=3, CustomerFirst="Timmy",CustomerLast="Wilson", CustomerEmail="timmy@email.com", CustomerAddress="789 North Ave"}
       };
-      
+
       customers.ForEach(c => context.Customers.Add(c));
       context.SaveChanges();
 
-    
+
       var authors = new List<Author>
             {
             new Author{Name="Sue Weaver", ID=1},
@@ -75,9 +75,6 @@ namespace GreenGoats.DAL
       books.ForEach(b => context.Books.Add(b));
       context.SaveChanges();
 
-      
-      
-     
     }
   }
 }
